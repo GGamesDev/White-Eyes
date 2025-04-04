@@ -1,0 +1,349 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 2025-04-03 20:58:48
+Description: Rendering entity in world
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.client.model.geom.ModelPart.getAllParts()" because the return value of "com.example.examplemod.WhiteEyesModel.root()" is null
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesModel.setupAnim(WhiteEyesModel.java:90) ~[main/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesModel.setupAnim(WhiteEyesModel.java:1) ~[main/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.LivingEntityRenderer.render(LivingEntityRenderer.java:119) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesRenderer.render(WhiteEyesRenderer.java:29) ~[main/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesRenderer.render(WhiteEyesRenderer.java:1) ~[main/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.LivingEntityRenderer.render(LivingEntityRenderer.java:30) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:159) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1232) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1019) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1070) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:830) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1181) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  com.example.examplemod.WhiteEyesModel
+    REASON: classloading
+  com.example.examplemod.WhiteEyesRenderer
+    REASON: classloading
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraft.client.renderer.GameRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.LevelRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.entity.EntityRenderDispatcher
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.entity.LivingEntityRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mod: 
+	Example Mod (examplemod), Version: 1.0.0
+		at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesModel.setupAnim(WhiteEyesModel.java:90)
+Stacktrace:
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesModel.setupAnim(WhiteEyesModel.java:90) ~[main/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesModel.setupAnim(WhiteEyesModel.java:1) ~[main/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.LivingEntityRenderer.render(LivingEntityRenderer.java:119) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesRenderer.render(WhiteEyesRenderer.java:29) ~[main/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesRenderer.render(WhiteEyesRenderer.java:1) ~[main/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.LivingEntityRenderer.render(LivingEntityRenderer.java:30) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:159) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1232) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1019) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1070) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+Transformer Audit:
+  com.example.examplemod.WhiteEyesModel
+    REASON: classloading
+  com.example.examplemod.WhiteEyesRenderer
+    REASON: classloading
+  net.minecraft.client.renderer.GameRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.LevelRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.entity.EntityRenderDispatcher
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.entity.LivingEntityRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+-- Entity being rendered --
+Details:
+	Entity Type: examplemod:white_eyes (com.example.examplemod.WhiteEyesEntity)
+	Entity ID: 180
+	Entity Name: entity.examplemod.white_eyes
+	Entity's Exact location: -1.50, -60.00, 5.50
+	Entity's Block location: World: (-2,-60,5), Section: (at 14,4,5 in -1,-4,0; chunk contains blocks -16,-64,0 to -1,319,15), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,-64,0 to -1,319,511)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:159) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1232) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1019) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1070) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:830) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1181) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraft.client.renderer.GameRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.LevelRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.entity.EntityRenderDispatcher
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+
+
+-- Renderer details --
+Details:
+	Assigned renderer: com.example.examplemod.WhiteEyesRenderer@186f51bb
+	Location: -3.15,-1.62,0.19 - World: (-4,-2,0), Section: (at 12,14,0 in -1,-1,0; chunk contains blocks -16,-64,0 to -1,319,15), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,-64,0 to -1,319,511)
+	Rotation: 75.9375
+	Delta: 0.8400005
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:159) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1232) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1019) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1070) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:830) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1181) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.main.Main
+    REASON: classloading
+  net.minecraft.client.renderer.GameRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.LevelRenderer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.renderer.entity.EntityRenderDispatcher
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+
+
+-- Uptime --
+Details:
+	JVM uptime: 46.793s
+	Wall uptime: 22.142s
+	High-res time: 35.974s
+	Client ticks: 277 ticks / 13.850s
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.fillReport(Minecraft.java:2377) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:856) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:85) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21.1-52.1.0/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:69) ~[fmlloader-1.21.1-52.1.0.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.4.jar!/:?]
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.4/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.4.jar!/:?]
+	at net.minecraftforge.bootstrap@2.1.7/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.8.jar!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.8.jar:2.1.8]
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.8.jar:2.1.8]
+Transformer Audit:
+  net.minecraft.client.Minecraft
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: runtimedistcleaner:AFTER
+  net.minecraft.client.main.Main
+    REASON: classloading
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Dev'/38, l='ClientLevel', x=1.65, y=-60.00, z=5.31]]
+	Chunk stats: 961, 315
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 3614 game time, 3614 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+	Tracked entity count: 89
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, mod_resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Mac OS X (x86_64) version 12.7.5
+	Java Version: 22.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 481706888 bytes (459 MiB) / 1073741824 bytes (1024 MiB) up to 31675383808 bytes (30208 MiB)
+	CPUs: 24
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Xeon(R) CPU           X5675  @ 3.07GHz
+	Identifier: Intel64 Family 6 Model 44 Stepping 2
+	Microarchitecture: Westmere (Server)
+	Frequency (GHz): 3.06
+	Number of physical packages: 2
+	Number of physical CPUs: 12
+	Number of logical CPUs: 24
+	Graphics card #0 name: ATI Radeon HD 5770
+	Graphics card #0 vendor: AMD (0x1002)
+	Graphics card #0 VRAM (MiB): 1024.00
+	Graphics card #0 deviceId: 0x68b8
+	Graphics card #0 versionInfo: Revision ID: 0x0000, ROM Revision: 113-C0160C-155, VBIOS Version: 113-C01601-103, EFI Driver Version: 01.00.436
+	Memory slot #0 capacity (MiB): 0.00
+	Memory slot #0 clockSpeed (GHz): 0.00
+	Memory slot #0 type: unknown
+	Virtual memory max (MiB): 131072.00
+	Virtual memory used (MiB): 32087.93
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 349952.69, total: 953541.69
+	Space in storage for workdir (MiB): available: 349952.69, total: 953541.69
+	JVM Flags: 2 total; -Xss1M -XX:+ShowCodeDetailsInExceptionMessages
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: ATI Radeon HD 5770 OpenGL Engine GL version 4.1 ATI-1.66.42, ATI Technologies Inc.
+	Window size: 854x480
+	GFLW Platform: cocoa
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: <disabled>
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Universe: 400921fb54442d18
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 12/12 chunks
+	Resource Packs: vanilla, mod_resources
+	Current Language: en_us
+	Locale: fr_BE
+	System encoding: UTF-8
+	File encoding: UTF-8
+	CPU: 24x Intel(R) Xeon(R) CPU X5675 @ 3.07GHz
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/38, l='ServerLevel[New World]', x=1.65, y=-60.00, z=5.31]]
+	Active Data Packs: vanilla, mod:forge, mod:examplemod (incompatible)
+	Available Data Packs: bundle, mod:examplemod (incompatible), mod:forge, trade_rebalance, vanilla
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 5421868803037498720
+	ModLauncher: 10.2.4
+	ModLauncher launch target: forge_userdev_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ object_holder_definalize PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ eventbus PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@52
+		javafml@52.1.0
+	Mod List: 
+		                                                  |Minecraft                     |minecraft                     |1.21.1              |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |52.1.0              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Example Mod                   |examplemod                    |1.0.0               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: efbc7745-85d7-48a8-b9b8-77a8ce06438e
+	FML: 0.0
+	Forge: net.minecraftforge:52.1.0

@@ -1,0 +1,24 @@
+/kill @e[type=!minecraft:player]
+/gamerule doMobSpawning false
+/kill @e[type=!minecraft:player]
+/time set day
+/gamerule doDaylightCycle false
+/time set noon
+/gamerule doDaylightCycle true
+/time set noon
+/gamerule doDaylightCycle false
+/gamemode spectator
+/gamemode creative
+/gamemode spectator
+/gamemode creative
+/kill @e[type=!minecraft:player]
+/gamemode spectator
+/gamemode creative
+/kill @e[type=!minecraft:player]
+/gamemode survival
+/gamemode creative
+/fill 138 -60 152 138 -60 152 minecraft:lava
+/weather clear 10000d
+/kill @e[type=!minecraft:player]
+/gamemode survival
+/gamemode creative

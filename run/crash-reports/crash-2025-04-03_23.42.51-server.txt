@@ -1,0 +1,275 @@
+---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 2025-04-03 23:42:51
+Description: Ticking entity
+
+java.lang.IllegalArgumentException: Can't find attribute minecraft:generic.attack_damage
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.attributes.AttributeSupplier.getAttributeInstance(AttributeSupplier.java:20) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.attributes.AttributeSupplier.getValue(AttributeSupplier.java:27) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.attributes.AttributeMap.getValue(AttributeMap.java:68) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.getAttributeValue(LivingEntity.java:1958) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1452) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:65) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:112) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:103) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:769) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2705) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.aiStep(Mob.java:554) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:128) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:55) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2431) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.tick(Mob.java:351) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesEntity.tick(WhiteEyesEntity.java:83) ~[main/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:753) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.Level.guardEntityTick(Level.java:573) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:409) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:389) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1021) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:911) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:109) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:701) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+Transformer Audit:
+  com.example.examplemod.WhiteEyesEntity
+    REASON: classloading
+  net.minecraft.client.server.IntegratedServer
+    REASON: classloading
+  net.minecraft.server.MinecraftServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.level.ServerLevel
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.entity.AgeableMob
+    REASON: classloading
+  net.minecraft.world.entity.LivingEntity
+    REASON: classloading
+  net.minecraft.world.entity.Mob
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.entity.ai.attributes.AttributeMap
+    REASON: classloading
+  net.minecraft.world.entity.ai.attributes.AttributeSupplier
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.GoalSelector
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.MeleeAttackGoal
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.WrappedGoal
+    REASON: classloading
+  net.minecraft.world.entity.animal.Animal
+    REASON: classloading
+  net.minecraft.world.level.Level
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mod: 
+	Example Mod (examplemod), Version: 1.0.0
+		at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesEntity.tick(WhiteEyesEntity.java:83)
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.attributes.AttributeSupplier.getAttributeInstance(AttributeSupplier.java:20) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.attributes.AttributeSupplier.getValue(AttributeSupplier.java:27) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.attributes.AttributeMap.getValue(AttributeMap.java:68) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.getAttributeValue(LivingEntity.java:1958) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1452) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:65) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:112) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:103) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:769) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2705) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.aiStep(Mob.java:554) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:128) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:55) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2431) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.tick(Mob.java:351) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/examplemod@1.0.0/com.example.examplemod.WhiteEyesEntity.tick(WhiteEyesEntity.java:83) ~[main/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:753) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.Level.guardEntityTick(Level.java:573) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:409) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+Transformer Audit:
+  com.example.examplemod.WhiteEyesEntity
+    REASON: classloading
+  net.minecraft.server.level.ServerLevel
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.entity.AgeableMob
+    REASON: classloading
+  net.minecraft.world.entity.LivingEntity
+    REASON: classloading
+  net.minecraft.world.entity.Mob
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.entity.ai.attributes.AttributeMap
+    REASON: classloading
+  net.minecraft.world.entity.ai.attributes.AttributeSupplier
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.GoalSelector
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.MeleeAttackGoal
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.WrappedGoal
+    REASON: classloading
+  net.minecraft.world.entity.animal.Animal
+    REASON: classloading
+  net.minecraft.world.level.Level
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+-- Entity being ticked --
+Details:
+	Entity Type: examplemod:white_eyes (com.example.examplemod.WhiteEyesEntity)
+	Entity ID: 3
+	Entity Name: entity.examplemod.white_eyes
+	Entity's Exact location: 119.07, -60.00, 111.71
+	Entity's Block location: World: (119,-60,111), Section: (at 7,4,15 in 7,-4,6; chunk contains blocks 112,-64,96 to 127,319,111), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Entity's Momentum: -0.08, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.Level.guardEntityTick(Level.java:573) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:409) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:389) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1021) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:911) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:109) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:701) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+Transformer Audit:
+  net.minecraft.client.server.IntegratedServer
+    REASON: classloading
+  net.minecraft.server.MinecraftServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.level.ServerLevel
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.Level
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayer['Dev'/1, l='ServerLevel[New World]', x=115.52, y=-57.13, z=107.26]]
+	Chunk stats: 2601
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 118182 game time, 6166 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Commands: true
+	Level weather: Rain time: 46029 (now: false), thunder time: 68622 (now: false)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 3
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.fillReportDetails(ServerLevel.java:1697) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1024) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:911) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:109) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:701) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[forge-1.21.1-52.1.0_mapped_official_1.21.1.jar%230!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1570) [?:?]
+Transformer Audit:
+  net.minecraft.client.server.IntegratedServer
+    REASON: classloading
+  net.minecraft.server.MinecraftServer
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+  net.minecraft.server.level.ServerLevel
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Mac OS X (x86_64) version 12.7.5
+	Java Version: 22.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 374887472 bytes (357 MiB) / 1140850688 bytes (1088 MiB) up to 31675383808 bytes (30208 MiB)
+	CPUs: 24
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Xeon(R) CPU           X5675  @ 3.07GHz
+	Identifier: Intel64 Family 6 Model 44 Stepping 2
+	Microarchitecture: Westmere (Server)
+	Frequency (GHz): 3.06
+	Number of physical packages: 2
+	Number of physical CPUs: 12
+	Number of logical CPUs: 24
+	Graphics card #0 name: ATI Radeon HD 5770
+	Graphics card #0 vendor: AMD (0x1002)
+	Graphics card #0 VRAM (MiB): 1024.00
+	Graphics card #0 deviceId: 0x68b8
+	Graphics card #0 versionInfo: Revision ID: 0x0000, ROM Revision: 113-C0160C-155, VBIOS Version: 113-C01601-103, EFI Driver Version: 01.00.436
+	Memory slot #0 capacity (MiB): 0.00
+	Memory slot #0 clockSpeed (GHz): 0.00
+	Memory slot #0 type: unknown
+	Virtual memory max (MiB): 131072.00
+	Virtual memory used (MiB): 31307.48
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 350862.47, total: 953541.69
+	Space in storage for workdir (MiB): available: 350862.47, total: 953541.69
+	JVM Flags: 2 total; -Xss1M -XX:+ShowCodeDetailsInExceptionMessages
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/1, l='ServerLevel[New World]', x=115.52, y=-57.13, z=107.26]]
+	Active Data Packs: vanilla, mod:forge, mod:examplemod (incompatible)
+	Available Data Packs: bundle, mod:examplemod (incompatible), mod:forge, trade_rebalance, vanilla
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 5421868803037498720
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.2.4
+	ModLauncher launch target: forge_userdev_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ object_holder_definalize PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ eventbus PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@52
+		javafml@52.1.0
+	Mod List: 
+		                                                  |Minecraft                     |minecraft                     |1.21.1              |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |52.1.0              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Example Mod                   |examplemod                    |1.0.0               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 833ee42b-078b-44dc-8372-949a6cc9dac9
+	FML: 0.0
+	Forge: net.minecraftforge:52.1.0
